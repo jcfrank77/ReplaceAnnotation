@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "example"
+	},
+	{
+		"path": "replace_annotation"
+	},
+	{
+		"path": "replace_generator"
+	}
+]
+}

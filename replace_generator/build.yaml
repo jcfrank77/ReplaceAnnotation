@@ -1,0 +1,26 @@
+targets:
+  $default:
+    builders:
+      mapping_builder:
+        enabled: true
+      replace_generator:
+        enabled: true
+
+builders:
+  mapping_builder:
+    target: ":replace_generator"
+    import: "package:replace_generator/mapping_builder.dart"
+    builder_factories: ["mappingBuilder"]
+    build_extensions: { ".dart": [] }
+    auto_apply: dependents
+    build_to: cache
+    runs_before: ["replace_generator"]
+    # applies_builders: ["source_gen"]
+  replace_generator:
+    target: ":replace_generator"
+    import: "package:replace_generator/replace_generator.dart"
+    builder_factories: ["replaceBuilder"]
+    build_extensions: { ".dart": [] }
+    auto_apply: dependents
+    build_to: source
+    applies_builders: ["source_gen"]

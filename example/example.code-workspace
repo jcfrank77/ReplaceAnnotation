@@ -1,14 +1,10 @@
 {
   "folders": [
-	{
-		"path": "."
-	},
-	{
-		"path": "../annotations"
-	},
-	{
-		"path": "../generators"
-	}
-],
-  "settings": {}
+    {
+      "path": "."
+    },
+    {
+      "path": "../replace_annotation"
+    }
+  ]
 }
